@@ -29,4 +29,4 @@ Then, we must send the updated script.js to the bucket:
 >     cd ../..
 
 2) Copy the archive to s3 bucket
->     aws s3 cp script.js s3://front-bucket1337/ # or your actual bucket name
+>     aws s3 cp script.js s3://front-bucket1337/             #or your actual bucket name
