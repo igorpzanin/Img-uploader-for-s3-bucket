@@ -5,7 +5,7 @@ resource "aws_api_gateway_gateway_response" "default_4xx" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -20,7 +20,7 @@ resource "aws_api_gateway_gateway_response" "default_5xx" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -35,7 +35,7 @@ resource "aws_api_gateway_gateway_response" "access_denied" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -50,7 +50,7 @@ resource "aws_api_gateway_gateway_response" "api_configuration_error" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -65,7 +65,7 @@ resource "aws_api_gateway_gateway_response" "authorizer_configuration_error" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -80,7 +80,7 @@ resource "aws_api_gateway_gateway_response" "authorizer_failure" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -95,7 +95,7 @@ resource "aws_api_gateway_gateway_response" "bad_request_body" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -110,7 +110,7 @@ resource "aws_api_gateway_gateway_response" "bad_request_parameters" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -125,7 +125,7 @@ resource "aws_api_gateway_gateway_response" "expired_token" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -140,7 +140,7 @@ resource "aws_api_gateway_gateway_response" "integration_failure" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -155,7 +155,7 @@ resource "aws_api_gateway_gateway_response" "integration_timeout" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -170,7 +170,7 @@ resource "aws_api_gateway_gateway_response" "invalid_api_key" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -185,7 +185,7 @@ resource "aws_api_gateway_gateway_response" "invalid_signature" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -200,7 +200,7 @@ resource "aws_api_gateway_gateway_response" "missing_authentication_token" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -215,7 +215,7 @@ resource "aws_api_gateway_gateway_response" "quota_exceeded" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -230,7 +230,7 @@ resource "aws_api_gateway_gateway_response" "request_too_large" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -245,7 +245,7 @@ resource "aws_api_gateway_gateway_response" "resource_not_found" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -260,7 +260,7 @@ resource "aws_api_gateway_gateway_response" "throttled" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -275,7 +275,7 @@ resource "aws_api_gateway_gateway_response" "unauthorized" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -290,7 +290,7 @@ resource "aws_api_gateway_gateway_response" "unsupported_media_type" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
@@ -305,7 +305,7 @@ resource "aws_api_gateway_gateway_response" "waf_filtered" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,POST'"
-    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://front-bucket1337.s3-website-us-east-1.amazonaws.com'"
+    "gatewayresponse.header.Access-Control-Allow-Origin"  = "'http://${var.front_bucket_name}.s3-website-us-east-1.amazonaws.com'"
   }
 
   response_templates = {
